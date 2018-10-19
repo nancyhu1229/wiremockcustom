@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 200,
-    "body": "Original body",
+    "body": "1 －Original body",
     "transformers": ["My-Transfer"]
   }
 }

@@ -1,0 +1,21 @@
+{
+  "request" : {
+    "urlPath" : "/something-async",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body": "{{now offset='10 years' format='yyyy-MM-dd'}}",
+    "transformers": ["response-template","My-Transfer"]
+  },
+  "postServeActions" : {
+    "webhook" : {
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "method" : "POST",
+      "body" : "{ \"result\": \"SUCCESS\" }",
+      "url" : "http://localhost:8080/callback"
+    }
+  }
+}
