@@ -3,6 +3,7 @@ package com.aotigreen.mock;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
+import com.github.tomakehurst.wiremock.http.trafficlistener.ConsoleNotifyingWiremockNetworkTrafficListener;
 
 /**
  * nancy.hu
@@ -24,8 +25,17 @@ public class WireMockCustomServer {
 
         //mapping和file文件夹所在位置
         config.usingFilesUnderClasspath("./");
+
+        //监听row traffic
+//        config.networkTrafficListener(new ConsoleNotifyingWiremockNetworkTrafficListener());
+
+        config.networkTrafficListener();
         WireMockServer wireMockServer = new WireMockServer(config);
         wireMockServer.start();
+
+        //http://localhost:8089/local-transform4/
+        //http://localhost:8089/__admin/docs/
+//        http://localhost:8089/__admin/swagger-ui/#/
 
     }
 }
