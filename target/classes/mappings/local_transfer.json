@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/local-transform"
+  },
+  "response": {
+    "status": 200,
+    "body": "Original body",
+    "transformers": ["My-Transfer"]
+  }
+}
