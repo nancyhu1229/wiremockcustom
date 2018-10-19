@@ -9,8 +9,9 @@ import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.Response;
 import com.github.tomakehurst.wiremock.http.ResponseDefinition;
 
-/*
-这个transfer不好用，使用ResponseTransfer
+/**
+ * nancy.hu
+ * 20181019
  */
 public class CustomRespTransfer1 extends ResponseDefinitionTransformer {
 

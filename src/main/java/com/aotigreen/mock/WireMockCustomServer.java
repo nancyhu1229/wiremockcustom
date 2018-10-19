@@ -4,6 +4,10 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
 
+/**
+ * nancy.hu
+ * 20181019
+ */
 public class WireMockCustomServer {
 
     public static void main(String[] args){

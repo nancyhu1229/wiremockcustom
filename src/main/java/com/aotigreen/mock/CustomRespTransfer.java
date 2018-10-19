@@ -7,6 +7,10 @@ import com.github.tomakehurst.wiremock.extension.ResponseTransformer;
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.Response;
 
+/**
+ * nancy.hu
+ * 20181019
+ */
 public class CustomRespTransfer extends ResponseTransformer {
     public Response transform(Request request, Response response, FileSource fileSource, Parameters parameters) {
         Response.Builder builder = new Response.Builder();
