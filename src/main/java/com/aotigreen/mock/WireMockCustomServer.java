@@ -1,6 +1,7 @@
 package com.aotigreen.mock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
+import com.github.tomakehurst.wiremock.common.ConsoleNotifier;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
 import com.github.tomakehurst.wiremock.http.trafficlistener.ConsoleNotifyingWiremockNetworkTrafficListener;
@@ -36,7 +37,10 @@ public class WireMockCustomServer {
 //        config.networkTrafficListener(new ConsoleNotifyingWiremockNetworkTrafficListener());
 
         config.networkTrafficListener();
+
+        config.notifier(new ConsoleNotifier(true));
         WireMockServer wireMockServer = new WireMockServer(config);
+
 //        wireMockServer.snapshotRecord(
 //                new RecordSpecBuilder().makeStubsPersistent(true));
         wireMockServer.start();

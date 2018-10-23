@@ -1,11 +1,14 @@
 {
+  "scenarioName": "demo",
+  "requiredScenarioState": "2",
+
   "request": {
     "method": "GET",
-    "url": "/local-transform-"
+    "url": "/statefull"
   },
   "response": {
     "status": 200,
-    "body": "1 －Original body",
+    "body": "3 －Original body",
     "transformers": ["My-Transfer"]
   }
 }

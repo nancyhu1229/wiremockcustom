@@ -1,0 +1,13 @@
+{
+  "scenarioName": "1demo1",
+  "requiredScenarioState": "1",
+  "newScenarioState": "2",
+  "request": {
+    "method": "GET",
+    "url": "/statefull"
+  },
+  "response": {
+    "status": 200,
+    "body": "2 -Original body demo1"
+  }
+}

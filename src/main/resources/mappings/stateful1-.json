@@ -1,0 +1,14 @@
+{
+  "scenarioName": "1demo1",
+  "requiredScenarioState": "Started",
+  "newScenarioState": "1",
+  "request": {
+    "method": "GET",
+    "url": "/statefull"
+  },
+  "response": {
+    "status": 200,
+    "body": "1 - Original body demo1",
+    "transformers": ["My-Transfer"]
+  }
+}
