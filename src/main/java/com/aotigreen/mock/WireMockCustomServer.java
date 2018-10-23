@@ -6,7 +6,8 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
 import com.github.tomakehurst.wiremock.http.trafficlistener.ConsoleNotifyingWiremockNetworkTrafficListener;
 import com.github.tomakehurst.wiremock.recording.RecordSpecBuilder;
-import org.wiremock.webhooks.Webhooks;
+import com.tairan.qa.mock.webhooks.Webhooks;
+//import org.wiremock.webhooks.Webhooks;
 
 /**
  * nancy.hu
@@ -40,6 +41,7 @@ public class WireMockCustomServer {
 
         config.notifier(new ConsoleNotifier(true));
         WireMockServer wireMockServer = new WireMockServer(config);
+
 
 //        wireMockServer.snapshotRecord(
 //                new RecordSpecBuilder().makeStubsPersistent(true));
