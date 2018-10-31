@@ -20,11 +20,16 @@ public class WireMockCustomServer {
         //No-args constructor will start on port 8080, no HTTPS
         WireMockConfiguration config = new WireMockConfiguration().port(8089);
 
-        //TODO 关闭回放功能
+        //关闭记录请求信息。不做请求记录
         config.disableRequestJournal();
         //注册自定义response转换器
         config.extensions(CustomRespTransfer.class);
+        config.extensions(CustomRespTransfer2.class);
+
         config.extensions(CustomRespTransfer1.class);
+
+        //注册webhook，调用异步回调的功能
+        config.extensions(new Webhooks());
         //注册 通用response 模版   可以和ResponseTransfer配合使用，但是不可以和ResponeDefintionTransfer配置使用
         config.extensions(new ResponseTemplateTransformer(false));
 
@@ -46,12 +51,5 @@ public class WireMockCustomServer {
 //        wireMockServer.snapshotRecord(
 //                new RecordSpecBuilder().makeStubsPersistent(true));
         wireMockServer.start();
-//        wireMockServer.startRecording("http://localhost:8080/callback");
-
-
-        //http://localhost:8089/local-transform4/
-        //http://localhost:8089/__admin/docs/
-//        http://localhost:8089/__admin/swagger-ui/#/
-
     }
 }

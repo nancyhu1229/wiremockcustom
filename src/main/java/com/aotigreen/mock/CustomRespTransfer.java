@@ -16,7 +16,7 @@ public class CustomRespTransfer extends ResponseTransformer {
         Response.Builder builder = new Response.Builder();
         builder.status(200);
         //TODO 增加自己的实现
-        builder.body(response.getBodyAsString() + " ====hello my transfer");
+        builder.body(response.getBodyAsString() + " ====my transfer 1");
         return builder.build();
     }
 

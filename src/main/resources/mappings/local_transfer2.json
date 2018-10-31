@@ -6,6 +6,6 @@
 "response": {
 "status": 200,
 "body": "{{now offset='10 years' format='yyyy-MM-dd'}}",
-"transformers": ["response-template"]
+"transformers": ["response-template","My-Transfer","My-Transfer2"]
 }
 }
